@@ -7,9 +7,10 @@ export default function environmentConfig(environment: string) {
     database: {
       client: 'pg',
       connection: {
-        host: 'localhost',
-        user: 'daw',
-        database: 'ascent_development'
+        host: process.env.DB_LOCALHOST,
+        user: process.env.DB_USER,
+        database: process.env.DB_DATABASE,
+        password: process.env.DB_PASS
       }
     }
   };
